@@ -6,7 +6,7 @@
     "require": {
         "php": ">=7.2.9",
         "composer-plugin-api": "^1.0 | ^2.0",
-        "bolt/webdriver-binary-downloader": "dev-master"
+        "bolt/webdriver-binary-downloader": "^2.3"
     },
     "require-dev": {
         "composer/composer": "^1.0 | ^2.0",
