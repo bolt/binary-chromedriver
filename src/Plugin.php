@@ -44,4 +44,14 @@ class Plugin implements \Composer\Plugin\PluginInterface, \Composer\EventDispatc
 
         $driverInstaller->executeWithConfig($pluginConfig);
     }
+
+    public function deactivate()
+    {
+        
+    }
+
+    public function uninstall()
+    {
+        
+    }
 }
