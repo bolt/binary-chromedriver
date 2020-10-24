@@ -5,19 +5,22 @@
  */
 namespace Vaimo\ChromeDriver;
 
+use Composer\Composer;
+use Composer\IO\IOInterface;
+
 class Plugin implements \Composer\Plugin\PluginInterface, \Composer\EventDispatcher\EventSubscriberInterface
 {
     /**
-     * @var \Composer\Composer
+     * @var Composer
      */
     private $composerRuntime;
 
     /**
-     * @var \Composer\IO\IOInterface
+     * @var IOInterface
      */
     private $cliIO;
     
-    public function activate(\Composer\Composer $composer, \Composer\IO\IOInterface $cliIO)
+    public function activate(Composer $composer, IOInterface $cliIO)
     {
         $this->composerRuntime = $composer;
         $this->cliIO = $cliIO;
@@ -45,12 +48,12 @@ class Plugin implements \Composer\Plugin\PluginInterface, \Composer\EventDispatc
         $driverInstaller->executeWithConfig($pluginConfig);
     }
 
-    public function deactivate()
+    public function deactivate(Composer $composer, IOInterface $io)
     {
         
     }
 
-    public function uninstall()
+    public function uninstall(Composer $composer, IOInterface $io)
     {
         
     }
